@@ -27,15 +27,13 @@ function assert(expression, successMessage, failureMessage) {
 
 //  Below, we will write an example of our test in action:
 
-var ricksFaveAnimal;
+var ricksFaveAnimal = '';
 
 exampleTest = function() {
-  assert(
-
-  );
+  assert(typeof(ricksFaveAnimal) === 'string', 'is string', 'is not string it is -'+typeof(ricksFaveAnimal));
 };
 
-
+exampleTest();
 /* ========================================================================
 ------------------------- Favorite Animals --------------------------------
 ===========================================================================
@@ -57,12 +55,16 @@ Remember to: pass in your expression, and write a success and a failure
 message. */
 
 faveAnimalTest = function() {
-  assert(
+  assert(nextAnimal === favoriteAnimals.map(function(item){
+    return item = nextAnimal;
+  })[0], nextAnimal+' is the nextAnimal', nextAnimal+' is not favoriteAnimals'
 
   );
 };
-
-/* TODO:
+faveAnimalTest();
+/* DONE:
 Now assign one of your favorite animals dynamically, by chance, to the
 nextAnimal variable ... then invoke your test!   :-)
 Your code begins on the next line: */
+nextAnimal = 'eagles';
+faveAnimalTest();
